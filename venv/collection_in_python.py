@@ -1,6 +1,16 @@
 import copy
 
-print("""####String Formatting using Dictionary###\n""")
+print("###List Comprehension###")
+print("it offers shorter syntax based on the existing list")
+price = [100,150,200,170,520,350]
+new_price = [x for x in price]
+print("we will get same result")   # https://masumbhai.github.io/personal_portfolio/   about my info,plz visit 😅
+print(new_price)
+new_price = [x-10 for x in price]
+print("we will get 10 minus from every elements in list")
+print(new_price)
+
+print("""\n####String Formatting using Dictionary###\n""")
 firstname = "Abdullah"
 lastname = "Masum"
 information1 = "my first name is {} and my last name is {}".format(firstname.upper(), lastname.upper())
@@ -94,4 +104,25 @@ print("This is intersection operation", A & B)
 print("This is difference operation (A-B)", A - B)
 print("This is subset operation (A<=B)", A <= B)
 print("This is superset operation (A<=B)", A >= B)
-print("why false,cause every B element is not included in A set")
+print("why false,cause every B element is not included in A set\n")
+
+def show(*lis,**dictionry):
+    print("list items are : ",lis)
+    print("dictionary items are : ",dictionry)
+dick4 = {"dhaka":55,"Mawa":35,"Gajipur":70}
+li1 = ["Gulistaan","Ramana","Farmgate","Karwan-Bazar"]
+show(li1,dick4)
+print("just observe the diiferences")
+show(*li1,**dick4)
+
+print()
+def printer(name):
+    return name;
+
+n = printer("Masum gets")
+print(n)
+n = printer("4.00")
+print(n)
+n = printer(False)
+print(n)
+
